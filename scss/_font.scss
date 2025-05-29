@@ -1,0 +1,8 @@
+@mixin fontDefine {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+@mixin backgroundColor {
+    background-color: white;
+}

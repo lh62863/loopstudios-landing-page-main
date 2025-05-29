@@ -6,7 +6,6 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
   color: #333;
   min-height: 100vh;
 }
@@ -14,11 +13,11 @@ body {
 main {
   max-width: 980px;
   margin: 0 auto;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
+  background-color: white;
 }
 
 header {
@@ -32,6 +31,7 @@ header {
   left: 0;
   right: 0;
   align-items: center;
+  z-index: 2;
 }
 header img {
   max-width: 100px;
@@ -56,6 +56,7 @@ header ul li a:hover {
 
 .hero {
   width: 100%;
+  position: relative;
 }
 .hero img {
   width: 100%;
@@ -76,23 +77,24 @@ header ul li a:hover {
 
 .feature {
   width: 100%;
-  height: 300px;
+  height: 350px;
   position: relative;
+  padding: 0 8em;
 }
 .feature img {
-  max-width: 450px;
+  width: 40%;
   max-height: 100%;
   position: absolute;
-  top: 10%;
-  left: 15%;
+  bottom: 0;
+  left: 8em;
 }
 .feature .text {
   position: absolute;
   bottom: 0;
-  right: 10%;
+  right: 3em;
   width: 500px;
   background-color: white;
-  padding: 20px;
+  padding: 3em;
 }
 .feature .text h2 {
   margin-bottom: 10px;
@@ -102,6 +104,8 @@ header ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 8em;
+  margin-top: 3em;
 }
 .content .title {
   display: flex;
@@ -114,22 +118,23 @@ header ul li a:hover {
 }
 .content .creations {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(0px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   gap: 20px;
-  position: relative;
 }
 .content .creations .creation {
-  padding: 20px;
+  position: relative;
 }
 .content .creations .creation img {
   width: 100%;
 }
 .content .creations .creation h3 {
   position: absolute;
-  left: 5%;
-  bottom: 5%;
+  left: calc(20px + 5%);
+  bottom: 10%;
   color: white;
-  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.8;
+  width: 70%;
+  background-color: transparent;
 }
 
 footer {
@@ -159,6 +164,9 @@ footer .logo-menu ul li a {
 footer .logo-menu ul li a:hover {
   text-decoration: underline;
 }
+footer .logo-menu ul li + li {
+  margin-left: 20px;
+}
 footer .socials-copyright {
   display: flex;
   flex-direction: column;
@@ -166,9 +174,13 @@ footer .socials-copyright {
 }
 footer .socials-copyright .socials {
   display: flex;
-  gap: 5px;
+  gap: 20px;
+  justify-content: flex-end;
 }
 footer .socials-copyright .socials img {
   width: 24px;
   height: 24px;
+}
+footer .socials-copyright .copyright {
+  opacity: 0.5;
 }/*# sourceMappingURL=main.css.map */
